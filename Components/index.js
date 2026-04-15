@@ -17,7 +17,7 @@ import Fot2 from "./SVG/Fot2";
 import Str1 from "./SVG/Str1";
 
 
-export default
+export
 {
     Footer,
     Table,
