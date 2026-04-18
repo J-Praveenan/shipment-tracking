@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Table = ({ setCreateShipmenModel, allShipmentsData }) => {
+export const Table = ({ setCreateShipmentModel, allShipmentData }) => {
   const convertTime = (time) => {
     const newTime = new Date(time);
     const dataTime = new Intl.DateTimeFormat("en-US", {
@@ -12,7 +12,7 @@ export const Table = ({ setCreateShipmenModel, allShipmentsData }) => {
     return dataTime;
   };
 
-  console.log(allShipmentsData);
+  console.log(allShipmentData);
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -27,10 +27,10 @@ export const Table = ({ setCreateShipmenModel, allShipmentsData }) => {
         </div>
         <div className="mt-3 md:mt-0">
           <p
-            onClick={() => setCreateShipmenModel(true)}
+            onClick={() => setCreateShipmentModel(true)}
             href="javascript:void(0)"
             className="inline-block px-4 py-2 text-white duration-150 font-medium bg-gray-800
-             hover:bg-gray-700 active:bg-gray-900 md:text-sm rounded-lg md:inline-flex"
+             hover:bg-gray-700 active:bg-gray-900 md:text-sm rounded-lg md:inline-flex cursor-pointer"
           >
             Add Tracking
           </p>
@@ -52,40 +52,38 @@ export const Table = ({ setCreateShipmenModel, allShipmentsData }) => {
           </thead>
 
           <tbody className="text-gray-600 divide-y">
-            {
-              allShipmentsData?.map((shipment, idx) => (
-                <tr key={idx}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.sender.slice(0, 15)}...
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.receiver.slice(0, 15)}...
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {convertTime(shipment.pickupTime)}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.distance} Km
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.price}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.deliveryTime}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.isPaid ? "Completed" : "Not Completed"}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {shipment.status == 0 
-                      ? "PENDING"
-                      : shipment.status == 1
-                      ? "IN_TRANSIT"
-                      : "DELIVERED"}
-                  </td>
-                </tr>
-              ))
-            }
+            {allShipmentData?.map((shipment, idx) => (
+              <tr key={idx}>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.sender.slice(0, 15)}...
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.receiver.slice(0, 15)}...
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {convertTime(shipment.pickupTime)}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.distance} Km
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.price}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.deliveryTime}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.isPaid ? "Completed" : "Not Completed"}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {shipment.status == 0
+                    ? "PENDING"
+                    : shipment.status == 1
+                    ? "IN_TRANSIT"
+                    : "DELIVERED"}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
