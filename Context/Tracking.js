@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import web3modal from "web3modal";
+import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 
 // INTERNAL IMPORT
@@ -9,7 +9,7 @@ const ContractABI = tracking.abi;
 
 // -- FETCH SMART CONTRACT --
 const fetchContract = (signerOrProvider) => {
-  new ethers.Contract(ContractAddress, ContractABI, signerOrProvider);
+  return new ethers.Contract(ContractAddress, ContractABI, signerOrProvider);
 };
 
 export const TrackingContext = React.createContext();
@@ -24,7 +24,7 @@ export const TrackingProvider = ({ children }) => {
     const { receiver, pickupTime, distance, price } = items;
 
     try {
-      const web3Modal = new Web3modal();
+      const web3Modal = new Web3Modal();
       const connection = await web3Modal.connect();
       const provider = new ethers.providers.Web3Provider(connection);
       const signer = provider.getSigner();
@@ -60,6 +60,7 @@ export const TrackingProvider = ({ children }) => {
         price: ethers.utils.formatEther(shipment.price.toString()),
         pickupTime: shipment.pickupTime.toNumber(),
         deliveryTime: shipment.deliveryTime.toNumber(),
+        distance: shipment.distance.toNumber(),
         isPaid: shipment.isPaid,
         status: shipment.status,
       }));
