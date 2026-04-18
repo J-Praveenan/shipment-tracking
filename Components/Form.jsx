@@ -21,7 +21,9 @@ export const Form = ({
   };
 
   return createShipmentModel ? (
-    <div className="fixed inset-0 z-10 overflow-y-auto">
+    <div
+      className="fixed inset-0 z-10 overflow-y-auto"
+    >
       <div
         className="fixed inset-0 w-full h-full opacity-100"
         // onClick={() => setCreateShipmentModel(true)}

@@ -35,7 +35,7 @@ export default function index() {
 
   // DATA STATE VARIABLES
   const [allShipmentData, setAllShipmentData] = useState([]);
-  const [shipmentCount, setShipmentCount] = useState(0)
+  const [shipmentCount, setShipmentCount] = useState(0);
 
   useEffect(() => {
     const loadShipments = async () => {
@@ -51,7 +51,7 @@ export default function index() {
       <Services
         setOpenProfile={setOpenProfile}
         setCompleteModal={setCompleteModel}
-        setGetModal={setGetModel}
+        setGetModel={setGetModel}
         setStartModal={setStartModel}
       />
 
@@ -81,7 +81,7 @@ export default function index() {
 
       <GetShipment
         getModel={getModel}
-        setGetModal={setGetModel}
+        setGetModel={setGetModel}
         getShipment={getShipment}
       />
 
