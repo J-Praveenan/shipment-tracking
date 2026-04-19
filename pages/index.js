@@ -75,7 +75,7 @@ export default function index() {
 
       <CompleteShipment
         completeModel={completeModel}
-        setCompleteModal={setCompleteModel}
+        setCompleteModel={setCompleteModel}
         completeShipment={completeShipment}
       />
 
