@@ -87,7 +87,7 @@ export default function index() {
 
       <StartShipment
         startModel={startModel}
-        setStartModal={setStartModel}
+        setStartModel={setStartModel}
         startShipment={startShipment}
       />
     </>
