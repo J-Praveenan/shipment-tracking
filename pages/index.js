@@ -12,6 +12,7 @@ import {
 } from "../Components/index";
 
 import { TrackingContext } from "../Context/Tracking";
+import { ShipmentCount } from "../Components/ShipmentCount";
 // import { Table } from '../Components/Table';
 
 TrackingContext;
@@ -23,7 +24,8 @@ export default function index() {
     completeShipment,
     getShipment,
     startShipment,
-    getShipmentCount,
+    getShipmentsCount,
+    getUserBalance,
   } = useContext(TrackingContext);
 
   // STATE VARIABLE
@@ -32,6 +34,7 @@ export default function index() {
   const [startModel, setStartModel] = useState(false);
   const [completeModel, setCompleteModel] = useState(false);
   const [getModel, setGetModel] = useState(false);
+  const [shipmentCountModel, setShipmentCountModel] = useState(false);
 
   // DATA STATE VARIABLES
   const [allShipmentData, setAllShipmentData] = useState([]);
@@ -53,6 +56,7 @@ export default function index() {
         setCompleteModal={setCompleteModel}
         setGetModel={setGetModel}
         setStartModal={setStartModel}
+        setShipmentCountModel={setShipmentCountModel}
       />
 
       <Table
@@ -70,7 +74,8 @@ export default function index() {
         openProfile={openProfile}
         setOpenProfile={setOpenProfile}
         currentUser={currentUser}
-        getShipmentCount={getShipmentCount}
+        getShipmentsCount={getShipmentsCount}
+        getUserBalance={getUserBalance}
       />
 
       <CompleteShipment
@@ -89,6 +94,12 @@ export default function index() {
         startModel={startModel}
         setStartModel={setStartModel}
         startShipment={startShipment}
+      />
+
+      <ShipmentCount
+        getShipmentsCount={getShipmentsCount}
+        shipmentCountModel={shipmentCountModel}
+        setShipmentCountModel={setShipmentCountModel}
       />
     </>
   );

@@ -1,22 +1,24 @@
 import React from "react";
 import { Fot1, Fot2 } from "../Components/index";
+import images from "../Images/index";
+import Image from "next/image";
 
 export const Footer = () => {
   const footerNavs = [
     {
-      href: "javascript:void()",
+      href: "#",
       name: "Terms",
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "License",
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "Privacy",
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "About us",
     },
   ];
@@ -26,7 +28,7 @@ export const Footer = () => {
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="justify-between sm:flex">
           <div className="space-y-6">
-            <img src="https://www.floatui.com/logo.svg" className="w-32" />
+            <Image src={images.headerLogo} className="w-50" />
             <p className="max-w-md">
               Product tracking application using blockchain technology.
             </p>
@@ -46,7 +48,7 @@ export const Footer = () => {
               <a href="javascript:void()">
                 <Fot1 />
               </a>
-              <a href="javascript:void()" className="mt-0 block sm:mt-3">
+              <a href="#" className="mt-0 block sm:mt-3">
                 <Fot2 />
               </a>
             </div>

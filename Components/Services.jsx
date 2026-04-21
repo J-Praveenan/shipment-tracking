@@ -7,6 +7,7 @@ export const Services = ({
   setCompleteModal,
   setGetModel,
   setStartModal,
+  setShipmentCountModel,
 }) => {
   const team = [
     {
@@ -38,6 +39,8 @@ export const Services = ({
       setStartModal(true);
     } else if (text === 4) {
       setOpenProfile(true);
+    }else if (text === 5) {
+      setShipmentCountModel(true);
     }
   };
 

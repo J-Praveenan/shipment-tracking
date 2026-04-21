@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 
 import { TrackingContext } from "../Context/Tracking";
 import { Nav1, Nav2, Nav3 } from "../Components/index";
+import images from "../Images/index";
+import Image from "next/image";
 
 export const NavBar = () => {
   const [state, setState] = useState(false);
@@ -31,11 +33,11 @@ export const NavBar = () => {
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex item-center justify-between py-5 md:block">
           <a href="#">
-            <img
-              src="https://www.floatui.com/logo.svg"
-              width={120}
-              height={50}
-              alt="float ui logo"
+            <Image
+              src={images.headerLogo}
+              width={180}
+              height={100}
+              alt="HeaderLogo"
             />
           </a>
           <div className="md:hidden">
