@@ -1,40 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 📦 Blockchain Shipment Tracking DApp
 
-## Getting Started
+A decentralized shipment tracking application built using **Next.js, React, Solidity, and Ethers.js**.  
+This DApp allows users to create, start, complete, and track shipments securely on the blockchain.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+- 🔐 MetaMask wallet integration
+- 📦 Create shipment
+- 🚚 Start shipment
+- ✅ Complete shipment
+- 🔍 Fetch shipment details by ID
+- 📊 View all shipments in a tracking table
+- 👤 Profile with shipment count
+- 🎨 Responsive UI with Tailwind CSS
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+- Next.js
+- React.js
+- Tailwind CSS
+- Context API
+
+**Blockchain**
+- Solidity
+- Hardhat
+- Ethers.js
+- MetaMask
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/J-Praveenan/shipment-tracking.git
+cd shipment-tracking
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 3️⃣ Start Hardhat node
+```bash
+npx hardhat node
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 4️⃣ Deploy contract
+```bash
+npx hardhat run scripts/deploy.js --network localhost
+```
+Update contract address and ABI inside Context/Tracking.js.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### 5️⃣ Run the app
+```bash
+npm run dev
+```
+Open:
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🦊 MetaMask Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+1. Install MetaMask browser extension
+2. Add Hardhat Localhost Network (if using local blockchain)
+3. Import Hardhat test account private key
+4. Connect wallet from the app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔄 Shipment Workflow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+1. Connect wallet  
+2. Create shipment  
+3. Start shipment  
+4. Complete shipment  
+5. Track shipment by ID  
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates how blockchain can be used to build a secure and transparent shipment tracking system using smart contracts and modern frontend technologies.
+
+
+
+
+
+
+
+

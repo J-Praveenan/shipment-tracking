@@ -79,27 +79,56 @@ export const GetShipment = ({ getModel, setGetModel, getShipment }) => {
             {singleShipmentData == undefined ? (
               ""
             ) : (
-              <div className="text-left">
-                <p>Sender: {singleShipmentData.sender.slice(0, 25)}...</p>
-                <p>Receiver: {singleShipmentData.receiver.slice(0, 25)}...</p>
-                <p>PickupTime: {convertTime(singleShipmentData.pickupTime)}</p>
-                <p>
-                  DeliveryTime: {convertTime(singleShipmentData.deliveryTime)}
-                </p>
-                <p>Distance: {singleShipmentData.distance}</p>
-                <p>Price: {singleShipmentData.price}</p>
-                <p>
-                  Status:{" "}
-                  {singleShipmentData.status == 0
-                    ? "PENDING"
-                    : singleShipmentData.status == 1
-                    ? "IN_TRANSIT"
-                    : "DELIVERED"}
-                </p>
-                <p>
-                  Paid:{" "}
-                  {singleShipmentData.isPaid ? "Completed" : "Not Completed"}
-                </p>
+              <div className="mt-6 text-sm text-gray-700 space-y-3 text-left">
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Sender:</span>
+                  <span>{singleShipmentData.sender.slice(0, 25)}...</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Receiver:</span>
+                  <span>{singleShipmentData.receiver.slice(0, 25)}...</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Pickup Time:</span>
+                  <span>{convertTime(singleShipmentData.pickupTime)}</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Delivery Time:</span>
+                  <span>{convertTime(singleShipmentData.deliveryTime)}</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Distance:</span>
+                  <span>{singleShipmentData.distance}</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Price:</span>
+                  <span>{singleShipmentData.price} ETH</span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Status:</span>
+                  <span>
+                    {singleShipmentData.status == 0
+                      ? "PENDING"
+                      : singleShipmentData.status == 1
+                      ? "IN TRANSIT"
+                      : "DELIVERED"}
+                  </span>
+                </div>
+
+                <div className="flex">
+                  <span className="w-32 font-semibold">Paid:</span>
+                  <span>
+                    {singleShipmentData.isPaid ? "Completed" : "Not Completed"}
+                  </span>
+                </div>
+
               </div>
             )}
           </div>

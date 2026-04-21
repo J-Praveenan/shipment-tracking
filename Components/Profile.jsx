@@ -70,15 +70,15 @@ export const Profile = ({
               <div className="flex mt-4 space-x-3 md:mt-6">
                 <a
                   href="#"
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium
-              text-center text-black rounded-lg border-2"
+                  className="inline-flex items-center px-4 py-2 text-sm
+              text-center text-indigo-500 rounded-lg border-2 border-indigo-400 font-bold"
                 >
                   Balance: {balance} ETH
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium
-              text-center text-black rounded-lg border-2"
+                  className="inline-flex items-center px-4 py-2 text-sm
+              text-center  text-indigo-500 rounded-lg border-2 border-indigo-400 font-bold "
                 >
                   Total Shipment: {count}
                 </a>
