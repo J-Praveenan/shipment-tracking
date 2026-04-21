@@ -222,6 +222,26 @@ export const TrackingProvider = ({ children }) => {
     }
   };
 
+  const getUserBalance = async () => {
+    try {
+      if (!window.ethereum) return "Install Metamask";
+
+      const accounts = await window.ethereum.request({
+        method: "eth_accounts",
+      });
+
+      if (!accounts.length) return 0;
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+      const balance = await provider.getBalance(accounts[0]);
+
+      return parseFloat(ethers.utils.formatEther(balance)).toFixed(2);
+    } catch (error) {
+      console.log("Error getting balance", error);
+    }
+  };
+
   useEffect(() => {
     checkIfWalletConnected();
   }, []);
@@ -238,6 +258,7 @@ export const TrackingProvider = ({ children }) => {
         getShipment,
         getShipmentsCount,
         connectWallet,
+        getUserBalance,
       }}
     >
       {children}

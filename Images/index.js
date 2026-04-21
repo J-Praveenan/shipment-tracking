@@ -3,7 +3,9 @@ import getShipment from "./2.jpg";
 import compShipment from "./3.jpg";
 import startShipment from "./4.jpg";
 import userProfile from "./5.jpg";
-import send from "./5.jpg";
+import send from "./6.jpg";
+import profile from "./userProfile.jpg";
+import headerLogo from "./headerLogo.png";
 
 export default {
   shipCount,
@@ -12,4 +14,6 @@ export default {
   startShipment,
   userProfile,
   send,
+  profile,
+  headerLogo,
 };

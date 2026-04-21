@@ -53,9 +53,9 @@ export const Form = ({
               Track product, Create Shipment
             </h4>
             <p className="text-[15px] text-gray-600">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever
+              Easily track your products and create new shipments in a few
+              steps. Enter the required details below to manage your delivery
+              efficiently.
             </p>
 
             <form onSubmit={(e) => e.preventDefault()}>

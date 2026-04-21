@@ -16,25 +16,22 @@ import Fot1 from "./SVG/Fot1";
 import Fot2 from "./SVG/Fot2";
 import Str1 from "./SVG/Str1";
 
+export {
+  Footer,
+  Table,
+  NavBar,
+  Form,
+  Services,
+  Profile,
+  GetShipment,
+  CompleteShipment,
+  StartShipment,
 
-export
-{
-    Footer,
-    Table,
-    NavBar,
-    Form,
-    Services,
-    Profile,
-    GetShipment,
-    CompleteShipment,
-    StartShipment,
-
-    // SVG
-    Nav1,
-    Nav2,
-    Nav3,
-    Fot1,
-    Fot2,
-    Str1,
-    
+  // SVG
+  Nav1,
+  Nav2,
+  Nav3,
+  Fot1,
+  Fot2,
+  Str1,
 };
