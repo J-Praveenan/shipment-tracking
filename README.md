@@ -98,6 +98,14 @@ MIT License
 
 This project demonstrates how blockchain can be used to build a secure and transparent shipment tracking system using smart contracts and modern frontend technologies.
 
+---
+
+## 📸 Application Preview
+
+![Shipment Tracking App UI](./public/preview.png)
+
+---
+
 
 
 
